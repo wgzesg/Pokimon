@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Pokemons</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Hit Point</th>
+      <th>Attact</th>
+      <th>Defence</th>
+      <th>Special Attact</th>
+      <th>Special Defence</th>
+      <th>Speed</th>
+      <th>Type</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @monsList.each do |mon| %>
+      <tr>
+        <td><%= mon.name %></td>
+        <td><%= mon.hp %></td>
+        <td><%= mon.attact %></td>
+        <td><%= mon.defence %></td>
+        <td><%= mon.spAttact %></td>
+        <td><%= mon.spDefence %></td>
+        <td><%= mon.speed %></td>
+        <td><%= mon.type %></td>
+        <td>
+          <%= image_tag mon.sprite, size: "100x100"%>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<h1>Combat logs</h1>
+
+<div style="height:120px;width:600px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;">
+  <% @logList.each do |log| %>
+    <div>
+      <%= log %>
+    </div>
+  <% end %>
+</div>
+<br>
