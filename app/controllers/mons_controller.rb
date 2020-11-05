@@ -33,7 +33,7 @@ class MonsController < ApplicationController
     end
 
     @winner = nextAlive(0)
-    @logList << "winner is #{@winner}"
+    @logList << "winner is #{@monsList[@winner].name}"
   end
 
   def getMons(num)
