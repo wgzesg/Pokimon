@@ -13,5 +13,8 @@ The combat log will be displayed at the botton of the page.
 
 
 The main logic can be found in `./app/controllers/mons_controller.rb`. 
-Other important classes are `Poki.rb` where the Pokimon model is defined.
+
+Other important classes include `Poki.rb` where the Pokimon model is defined.
 This simplified model captures information required for simulating the combat.
+
+`TypeRelation.rb` where counter relation is stored.
